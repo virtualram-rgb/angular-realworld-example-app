@@ -11,11 +11,6 @@ pipeline {
         }
         stage ('Artifactory configuration') {
             steps {
-                rtServer (
-                    id: "ARTIFACTORY_SERVER",
-                    url: "https://virtualhost.jfrog.io/",
-                    credentialsId: "jfrog_creds"
-                )
                 rtNpmDeployer (
                     id: "NPM_DEPLOYER",
                     serverId: "Jfrog_instance",
