@@ -9,15 +9,6 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/virtualram-rgb/angular-realworld-example-app.git'
             }
         }
-        stage ('Artifactory configuration') {
-            steps {
-                rtNpmDeployer (
-                    id: "NPM_DEPLOYER",
-                    serverId: "Jfrog_instance",
-                    repo: "npmproject1-npm"
-                )
-            }
-        }
         stage ('Exec npm install') {
             steps {
                 rtNpmInstall (
