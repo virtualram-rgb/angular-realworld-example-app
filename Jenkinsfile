@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/virtualram-rgb/js-e2e-express-server.git'
+                git branch: 'main', url: 'https://github.com/virtualram-rgb/angular-realworld-example-app.git'
             }
         }
 
