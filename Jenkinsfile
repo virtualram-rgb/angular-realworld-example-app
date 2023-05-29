@@ -22,11 +22,7 @@ pipeline {
         
         stage ('Exec npm publish') {
             steps {
-                rtNpmPublish (
-                    tool: "nodejs", // Tool name from Jenkins configuration
-                    path: "package.json",
-                    deployerId: "NPM_DEPLOYER"
-                )
+                sh 'npm publish'
             }
         }
         stage ('Publish build info') {
