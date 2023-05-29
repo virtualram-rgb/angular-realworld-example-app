@@ -11,10 +11,7 @@ pipeline {
         }
         stage ('Exec npm install') {
             steps {
-                rtNpmInstall (
-                    tool: "nodejs", // Tool name from Jenkins configuration
-                    path: "package.json"
-                )
+                 sh 'npm install'
             }
         }
         stage('build'){
